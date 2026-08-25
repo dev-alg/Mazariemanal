@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مزاري منال | حِكمة تُلهم</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#d9a441;--dark:#17131f;--purple:#4b2a5d;--cream:#fff8ed}
+body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#17131f,#4b2a5d);color:#fff;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;width:320px;height:320px;border-radius:50%;background:#d9a44122;top:-100px;left:-80px;filter:blur(8px)}
+nav{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:24px 7%;border-bottom:1px solid #ffffff18}
+.logo{font-size:24px;font-weight:800;color:var(--gold)}
+.nav-btn{border:1px solid #ffffff30;color:#fff;background:#ffffff10;padding:10px 18px;border-radius:30px;cursor:pointer}
+.hero{position:relative;z-index:1;min-height:75vh;display:grid;place-items:center;text-align:center;padding:60px 20px}
+.content{max-width:850px}
+.badge{display:inline-block;background:#d9a44118;border:1px solid #d9a44166;color:#f3ca71;padding:9px 18px;border-radius:50px;margin-bottom:22px}
+h1{font-size:clamp(42px,8vw,86px);line-height:1.05;margin-bottom:22px}
+h1 span{color:var(--gold)}
+.lead{font-size:clamp(18px,2.5vw,25px);line-height:1.9;color:#eee;margin:auto;max-width:720px}
+.cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+button{font:inherit}
+.primary{background:var(--gold);color:#211827;border:0;padding:14px 26px;border-radius:35px;font-weight:bold;cursor:pointer;box-shadow:0 10px 30px #0003}
+.secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff30;padding:14px 26px;border-radius:35px;cursor:pointer}
+section{background:var(--cream);color:#251c2d;padding:75px 7%}
+.section-title{text-align:center;font-size:38px;margin-bottom:12px}
+.section-sub{text-align:center;color:#776d78;margin-bottom:40px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:1050px;margin:auto}
+.card{background:#fff;padding:28px;border-radius:24px;box-shadow:0 12px 35px #34233b12;border:1px solid #eadfd2;transition:.3s}
+.card:hover{transform:translateY(-7px)}
+.icon{font-size:34px;margin-bottom:15px}
+.card h3{margin-bottom:10px}
+.card p{line-height:1.8;color:#6c626e}
+.quote-area{background:#f1e5d5;padding:70px 7%;text-align:center}
+.quote{max-width:850px;margin:auto;background:#fff;border-radius:28px;padding:45px 28px;box-shadow:0 15px 45px #34233b18}
+.quote-mark{font-size:60px;color:var(--gold);line-height:.6}
+#quoteText{font-size:clamp(22px,4vw,34px);line-height:1.8;margin:20px 0}
+.author{color:#756b74}
+footer{text-align:center;padding:28px;color:#cfc5d0;background:#17131f}
+.modal{display:none;position:fixed;inset:0;background:#08050dcc;z-index:10;place-items:center;padding:20px}
+.modal.show{display:grid}
+.modal-box{background:var(--cream);color:#251c2d;max-width:650px;width:100%;border-radius:28px;padding:38px;text-align:center;position:relative}
+.close{position:absolute;top:12px;left:15px;border:0;background:none;font-size:30px;cursor:pointer;color:#554}
+@media(max-width:600px){nav{padding:18px 5%}.hero{min-height:70vh}section{padding:55px 5%}.modal-box{padding:32px 22px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">مزاري منال ✨</div>
+  <button class="nav-btn" onclick="showQuote()">حكمة اليوم</button>
+</nav>
+
+<header class="hero">
+  <div class="content">
+    <div class="badge">شخصية تُلهم من حولها</div>
+    <h1>لماذا <span>مزاري منال</span><br>حكيمة؟</h1>
+    <p class="lead">لأن الحكمة ليست كثرة الكلام، بل القدرة على رؤية المعنى في التفاصيل، واختيار الكلمة المناسبة، وتحويل التجارب إلى دروس جميلة.</p>
+    <div class="cta">
+      <button class="primary" onclick="showQuote()">اكتشف حكمة عشوائية</button>
+      <button class="secondary" onclick="document.getElementById('qualities').scrollIntoView({behavior:'smooth'})">لماذا هي حكيمة؟</button>
+    </div>
+  </div>
+</header>
+
+<section id="qualities">
+  <h2 class="section-title">صفات تجعلها حكيمة</h2>
+  <p class="section-sub">الحكمة تظهر في طريقة التفكير قبل أن تظهر في الكلمات.</p>
+  <div class="cards">
+    <article class="card"><div class="icon">🧠</div><h3>تفكير عميق</h3><p>لا تتسرع في الحكم، بل تحاول فهم الصورة كاملة قبل اتخاذ القرار.</p></article>
+    <article class="card"><div class="icon">🌱</div><h3>تتعلم من التجارب</h3><p>كل تجربة بالنسبة لها فرصة للنمو واكتساب درس جديد.</p></article>
+    <article class="card"><div class="icon">💬</div><h3>كلامها له معنى</h3><p>تعرف أن الكلمة الطيبة في وقتها قد تغيّر يوم شخص كامل.</p></article>
+    <article class="card"><div class="icon">❤️</div><h3>تفهم الآخرين</h3><p>تستمع بقلبها وتحاول رؤية الأمور من وجهة نظر الآخرين.</p></article>
+  </div>
+</section>
+
+<div class="quote-area">
+  <div class="quote">
+    <div class="quote-mark">“</div>
+    <div id="quoteText">اضغط على الزر لتحصل على حكمة عشوائية ✨</div>
+    <div class="author">— من حكم مزاري منال</div>
+    <button class="primary" style="margin-top:22px" onclick="showQuote()">حكمة أخرى</button>
+  </div>
+</div>
+
+<footer>صُنع بكل تقدير لمزاري منال 🤍</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeQuote()">
+  <div class="modal-box">
+    <button class="close" onclick="closeQuote()">×</button>
+    <div class="quote-mark">“</div>
+    <div id="modalQuote" style="font-size:28px;line-height:1.8;margin:18px 0"></div>
+    <div class="author">حكمة عشوائية ✨</div>
+  </div>
+</div>
+
+<script>
+const quotes=[
+"لا تجعل رأي الناس يطفئ النور الذي في داخلك.",
+"أحيانًا يكون الصمت أذكى إجابة.",
+"من يعرف قيمة الوقت، يعرف قيمة الحياة.",
+"لا تبحث عن الكمال؛ ابحث عن التطور.",
+"الكلمة الطيبة لا تحتاج إلى مناسبة.",
+"العقل الهادئ يرى حلولًا لا يراها الغضب.",
+"كل تجربة صعبة تحمل درسًا يستحق أن نتعلمه.",
+"كن لطيفًا، فأنت لا تعرف المعركة التي يخوضها الشخص أمامك.",
+"الحكمة أن تعرف متى تتكلم، ومتى تترك للأفعال أن تتحدث.",
+"لا تقارن بدايتك بمنتصف طريق شخص آخر."
+];
+function randomQuote(){return quotes[Math.floor(Math.random()*quotes.length)]}
+function showQuote(){
+ const q=randomQuote();
+ document.getElementById("quoteText").textContent=q;
+ document.getElementById("modalQuote").textContent=q;
+ document.getElementById("modal").classList.add("show");
+}
+function closeQuote(){document.getElementById("modal").classList.remove("show")}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuote()});
+</script>
+</body>
+</html>
